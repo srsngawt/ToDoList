@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1 style="color: blue;"><%=listTitle %>, Date-<%=typeOfDay%>.</h1>
+    </div>
+    <div class="box">
+            <% item.forEach(function(item){ %>
+                <form action="/delete" method="POST">
+                    <div class ="item">
+                        <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+                        <p> <%=item.name%></p>
+                    </div>
+                    <input type="hidden" value="<%=listTitle%>" name="listName">
+                </form>
+            <% }); %> 
+            <form class="item" action="/" method="POST">
+                <input type="text" placeholder="New Item" name="t1" autocomplete="off">
+                <button type="submit" value="<%= listTitle %>" name="list">+</button>
+            </form>
+    </div>
+
+    <center>Copyright 2021 SHUBHAM SANGAWAT.</center>
+    
+</body>
+</html>
