@@ -1,8 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const  mongoose = require("mongoose");
 const _ = require("lodash");
+
 
 const app = express();
 
@@ -21,9 +23,9 @@ var options = {
     month : "long"
 };
 
-var day = today.toLocaleDateString("hi-IN",options);
+var day = today.toLocaleDateString("EN-US",options);
 
-mongoose.connect("mongodb+srv://admin-shubham:cool123@cluster0.jwdkk.mongodb.net/todolistDB",{useNewUrlParser : true,  useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://" + process.env.USER + ":" + process.env.PASS + "@cluster0.jwdkk.mongodb.net/todolistDB",{useNewUrlParser : true,  useUnifiedTopology: true});
 
 const itemSchema = new mongoose.Schema({
     name: {
@@ -66,8 +68,8 @@ const List = mongoose.model("List", listSchema);
 
 app.get('/',function(req, res){
     
-    Item.find(function(err, toDoList){       
-        if(toDoList.length == 0){
+    Item.find(function(err,toDoList){       
+        if(toDoList.length==0){
             Item.insertMany(defaultItems, function(err){
                     if(err){
                         console.log(err);
