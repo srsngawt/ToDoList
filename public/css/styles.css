@@ -112,7 +112,7 @@ footer {
 }
 
 .help .popup {
-  width: 400px;
+  width: 365px;
   height: 0px;
   text-align: left;
   overflow: hidden;
@@ -123,7 +123,7 @@ footer {
 }
 
 .help .popup2 {
-  width: 400px;
+  width: 365px;
   height: 0px;
   text-align: left;
   position: relative;
@@ -133,7 +133,7 @@ footer {
 
 
 .help .popup {
-  left: -180px;
+  left: -160px;
   top: 10px;
 }
 
