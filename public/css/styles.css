@@ -111,8 +111,8 @@ footer {
   cursor: pointer;
 }
 
-.help .popup, .help .popup2 {
-  width: 560px;
+.help .popup {
+  width: 400px;
   height: 0px;
   text-align: left;
   overflow: hidden;
@@ -122,13 +122,23 @@ footer {
   transition: 1s;
 }
 
+.help .popup2 {
+  width: 400px;
+  height: 0px;
+  text-align: left;
+  position: relative;
+  background: #eee;
+}
+
+
+
 .help .popup {
-  left: -260px;
+  left: -180px;
   top: 10px;
 }
 
 .help .popup2 {
-  height: 220px;
+  height: 700px;
 }
 
 .help .popup2 h4 {
@@ -139,7 +149,7 @@ footer {
 
 .help:hover .popup {
   opacity: 1;
-  height: 270px;
+  height: auto;
 }
 
 .help .tell-me p:first-child {
@@ -148,12 +158,7 @@ footer {
 }
 
 .tell-me {
-  width: 150px;
-}
-
-.help .tell-me:hover .popup2 {
-  top: -220px;
-  opacity: 1;
+  width: 100px;
 }
 
 .help .popup h3 {
@@ -173,29 +178,17 @@ footer {
 }
 
 .help .popup .popup2 .sub-levels {
-  padding: 0 0 10px 140px;
+  padding: 0 0 10px 30px;
 }
 
 .help .popup .popup2 .sub-levels strong {
   font-size: 20px;
 }
 
-.help .popup .popup2 p:nth-child(5) {
-  padding: 20px 0 0 10px;
-}
-
-.help .popup a {
-  text-decoration: none;
-  color: #317eac;
-}
-
-.help .popup a:visited {
-  color: #317eac;
-}
-
-.help .popup p em {
-  font-size: 12px;
-}
 a{
   text-align: center;
+}
+img{
+  width:300px;
+  height:160px;
 }
